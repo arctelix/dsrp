@@ -4,7 +4,7 @@ docker run -d --name nginx --restart=always -p 80:80 -p 443:443 \
        --name nginx-proxy \
        -v /volumes/certs:/etc/nginx/certs:ro \
        -v /etc/nginx/vhost.d \
-       -v /etc/nginx/conf.d/nginx_proxy.conf:/etc/nginx/conf.d/nginx_proxy.conf:ro \
+       -v /etc/nginx/conf.d \
        -v /usr/share/nginx/html \
        -v /var/run/docker.sock:/tmp/docker.sock:ro \
        jwilder/nginx-proxy
